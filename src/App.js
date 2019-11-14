@@ -1,5 +1,7 @@
 import React, { useState } from "react";
+
 import Form from "./Form";
+
 import "./App.css";
 
 function App() {
@@ -16,7 +18,9 @@ function App() {
             return (
               <div className="member-card">
                 <p>{item.name}</p>
+
                 <p>{item.email}</p>
+
                 <p>{item.role}</p>
               </div>
             );

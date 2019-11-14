@@ -1,7 +1,16 @@
 import React, { useState } from "react";
 
 function Form(props) {
+  // Added state
+  //These values has to be entered by the user and empty strings will clear
+  // form fields on submit.
   const [form, setForm] = useState({ name: "", email: "", role: "" });
+
+  //Added onChange handler and function to handle the way
+  //the data is handled when the user enter it in the form.
+
+  //ADD spread Oper will take whatever exist in the stored result and append
+  // the new entry to it.
 
   const handleChange = event => {
     setForm({ ...form, [event.target.name]: event.target.value });
@@ -16,6 +25,8 @@ function Form(props) {
   };
 
   return (
+    // event handler is on the form because the whole form is been submitted.
+
     <form onSubmit={event => handleSubmit(event)}>
       <p>
         <label>
